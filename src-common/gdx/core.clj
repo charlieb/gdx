@@ -1,5 +1,6 @@
 (ns gdx.core
-  (:import [com.badlogic.gdx Game Gdx Graphics Screen]
+  (:require [gdx.input :refer [input-processor]])
+  (:import [com.badlogic.gdx Game Gdx Graphics Screen Input$Keys]
            [com.badlogic.gdx.graphics Color GL20]
            [com.badlogic.gdx.graphics.g2d BitmapFont]
            [com.badlogic.gdx.scenes.scene2d Stage]
@@ -30,4 +31,5 @@
       (resume []))))
 
 (defn -create [^Game this]
+  (.setInputProcessor Gdx/input input-processor)
   (.setScreen this main-screen))

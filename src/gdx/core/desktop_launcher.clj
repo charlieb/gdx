@@ -7,6 +7,6 @@
 
 (defn -main []
   (let [config (Lwjgl3ApplicationConfiguration.)]
-  (Lwjgl3Application. (gdx.core.Game.) config))
+    (Lwjgl3Application. (gdx.core.Game.) config))
   )
 
